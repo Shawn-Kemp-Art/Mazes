@@ -336,8 +336,8 @@ for (z = 0; z < stacks; z++) {
     $fx.features(features);
     //$fx.preview();
 
-    //send to studio.shawnkemp.art
-    if(new URLSearchParams(window.location.search).get('request')){sendAllExports()}; 
+     //send to studio.shawnkemp.art
+     if(new URLSearchParams(window.location.search).get('skart')){sendAllExports()}; 
 
     async function sendAllExports() {
        paper.view.update();
@@ -709,7 +709,10 @@ document.addEventListener('keypress', (event) => {
             saveAs(blob, filename);
             }
 
-
+        //send to studio.shawnkemp.art
+        if(event.key == "s") {
+            sendAllExports()
+            }  
 
        //Explode the layers     
        if(event.key == "e") {   
